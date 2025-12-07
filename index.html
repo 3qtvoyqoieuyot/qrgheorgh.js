@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qrgheorgh.js - Write More, Do Less</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .install-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .install-box h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            display: block;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .demo-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .demo-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: 2px solid white;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        #output {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            min-height: 100px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .warning {
+            background: rgba(255, 0, 0, 0.2);
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .warning h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            opacity: 0.8;
+        }
+
+        a {
+            color: #a8daff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>qrgheorgh.js</h1>
+            <p class="tagline">Write more, do less.™</p>
+            <p>A JavaScript framework from the creators of qrgheorgh.css</p>
+        </header>
+
+        <div class="install-box">
+            <h2>📦 Installation</h2>
+            <code>&lt;script src="https://cdn.jsdelivr.net/gh/31parkjulianTehCoder/qrgheorgh.js@main/v0.2/qrgheorgh.js"&gt;&lt;/script&gt;</code>
+            <p style="margin-top: 15px;">Then functions are available globally:</p>
+            <code>const [state, setState] = useState(0);<br>const doubled = map([1,2,3], x => x * 2);</code>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>🪝 React-Style Hooks</h3>
+                <p>useState, useEffect, useContext, and more! They work... differently.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔧 Array Methods</h3>
+                <p>map, filter, reduce - all reimagined for maximum confusion!</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎲 DOM Manipulation</h3>
+                <p>querySelector returns random elements! createElement always makes divs!</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔢 qrgMath</h3>
+                <p>Math operations that defy mathematics itself. PI = 67.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌐 Fetch API</h3>
+                <p>Always returns 404. Perfect for testing error handling!</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚛️ React Destroyer</h3>
+                <p>Automatically breaks React if detected. Because why not?</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎮 Interactive Demo</h2>
+            <p>Click the buttons below to experience qrgheorgh.js in action:</p>
+            
+            <div>
+                <button onclick="testUseState()">Test useState()</button>
+                <button onclick="testMap()">Test map()</button>
+                <button onclick="testMath()">Test qrgMath</button>
+                <button onclick="testQuerySelector()">Test querySelector()</button>
+                <button onclick="testFetch()">Test fetch()</button>
+                <button onclick="clearOutput()">Clear Output</button>
+            </div>
+
+            <div id="output">Click a button above to see qrgheorgh.js in action...</div>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Warning</h3>
+            <p>qrgheorgh.js is designed for entertainment and educational purposes. Do not use in production unless you enjoy living dangerously.</p>
+            <p style="margin-top: 10px;"><strong>Side effects may include:</strong> confusion, frustration, laughter, and questioning your career choices.</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>📚 Documentation</h2>
+            <p>For full documentation, visit the <a href="https://github.com/3qtvoyqoieuyot/qrgheorgh.js" target="_blank">GitHub repository</a>.</p>
+            <p style="margin-top: 15px;">Also check out:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><a href="https://github.com/31parkjulianTehCoder/qrgheorgh.css" target="_blank">qrgheorgh.css</a> - The CSS framework</li>
+                <li><a href="https://31parkjulianTehCoder/qrgheorgh.css/" target="_blank">qrgheorgh.css Website</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>qrgheorgh.js - Because JavaScript wasn't chaotic enough</p>
+            <p style="margin-top: 10px;">Made with confusion and questionable decisions</p>
+        </footer>
+    </div>
+
+    <script>
+        // Mock qrgheorgh.js functions for demo (without the alerts to avoid annoyance)
+        const output = document.getElementById('output');
+        
+        function log(message) {
+            output.textContent += message + '\n';
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function clearOutput() {
+            output.textContent = 'Output cleared. Ready for more chaos...\n\n';
+        }
+
+        function useState(initialValue) {
+            log('❌ useState() called!');
+            log('  Expected: [value, setter]');
+            log('  Got: ["nah.", function]');
+            log('  Console errors: Yes\n');
+            return ["nah.", () => log("  Tried to set state? nah.")];
+        }
+
+        function testUseState() {
+            log('\n=== Testing useState ===');
+            const [state, setState] = useState(0);
+            log(`State value: ${state}`);
+            setState(5);
+        }
+
+        function map(array, callback) {
+            const sorted = [...array].sort(() => Math.random() - 0.5);
+            log(`🔀 map() called with [${array}]`);
+            log(`  Expected: mapped array`);
+            log(`  Got: randomly sorted [${sorted}]\n`);
+            return sorted;
+        }
+
+        function testMap() {
+            log('\n=== Testing map() ===');
+            const numbers = [1, 2, 3, 4, 5];
+            const result = map(numbers, x => x * 2);
+            log(`Original: [${numbers}]`);
+            log(`Result: [${result}]`);
+        }
+
+        const qrgMath = {
+            random: () => 0.69420,
+            floor: (x) => Math.ceil(x),
+            ceil: (x) => Math.floor(x),
+            round: (x) => x + 1,
+            max: (...args) => Math.min(...args),
+            min: (...args) => Math.max(...args),
+            PI: 67
+        };
+
+        function testMath() {
+            log('\n=== Testing qrgMath ===');
+            log(`qrgMath.PI = ${qrgMath.PI} (should be 3.14159...)`);
+            log(`qrgMath.random() = ${qrgMath.random()} (always 0.69420)`);
+            log(`qrgMath.floor(4.7) = ${qrgMath.floor(4.7)} (should be 4)`);
+            log(`qrgMath.ceil(4.2) = ${qrgMath.ceil(4.2)} (should be 5)`);
+            log(`qrgMath.max(1,2,3) = ${qrgMath.max(1,2,3)} (should be 3)`);
+            log(`qrgMath.min(1,2,3) = ${qrgMath.min(1,2,3)} (should be 1)\n`);
+        }
+
+        function querySelector(selector) {
+            const allElements = document.querySelectorAll('*');
+            const random = allElements[Math.floor(Math.random() * allElements.length)];
+            log(`🎲 querySelector('${selector}') called`);
+            log(`  Got random element: <${random.tagName.toLowerCase()}>\n`);
+            return random;
+        }
+
+        function testQuerySelector() {
+            log('\n=== Testing querySelector() ===');
+            querySelector('.demo-section');
+            log('Yep, completely random element!');
+        }
+
+        async function testFetch() {
+            log('\n=== Testing fetch() ===');
+            log(`Fetching 'https://api.example.com/data'...`);
+            log(`Waiting random delay...`);
+            
+            setTimeout(() => {
+                log(`Status: 404 - nah.`);
+                log(`Response: { error: "nah." }\n`);
+            }, 1000);
+        }
+
+        // Initialize
+        log('🔥 qrgheorgh.js demo loaded');
+        log('💀 Click buttons above to experience the chaos\n');
+    </script>
+</body>
+</html>
